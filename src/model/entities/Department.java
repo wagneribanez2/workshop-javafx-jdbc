@@ -6,7 +6,7 @@ public class Department implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private int Id;
+	private int id;
 	private String name;
 	
 	public Department() {
@@ -14,16 +14,16 @@ public class Department implements Serializable{
 	}
 
 	public Department(int id, String name) {	
-		Id = id;
+		this.id = id;
 		this.name = name;
 	}
 
 	public int getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(int id) {
-		Id = id;
+		id = id;
 	}
 
 	public String getName() {
@@ -38,7 +38,7 @@ public class Department implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Id;
+		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
@@ -52,7 +52,7 @@ public class Department implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		if (Id != other.Id)
+		if (id != other.id)
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -64,7 +64,7 @@ public class Department implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Department [Id=" + Id + ", name=" + name + "]";
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
 	
 	
